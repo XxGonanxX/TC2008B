@@ -24,3 +24,8 @@ El repositorio del profesor, está dentro de la carpeta "tc2008b", para actualiz
 git pull
 ```
 
+En caso de querer revisarlo desde internet, el enlace es:
+
+https://github.com/Manchas2k4/tc2008b.git
+
+
