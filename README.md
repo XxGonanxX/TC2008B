@@ -3,7 +3,7 @@ Modelación de sistemas multiagentes con gráficas computacionales
 
 # Librerías
 
-Para que todo esto funcione, se debe instalar: \n
+Para que todo esto funcione, se debe instalar: /n
 1.- numpy \n
 2.- scikit-learn \n
 3.- matplotlib \n
