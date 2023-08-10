@@ -2,24 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
-
-    //Vehicle speed
     public float speed = 5.0f;
+    public float turnSpeed = 0.0f;
+    public float horizontalInput;
+    public float forwardInput;
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// This method is called before the first frame update
+    /// </summary>
     void Start()
     {
         
     }
-
-    // Update is called once per frame
+    /// <summary>
+    /// This method is called once per frame
+    /// </summary>
     void Update()
     {
-        //Mover vehículo hacia adelante
-        //transform.Translate(0,0,1);
-        transform.Translate(Vector3.forward * Time.deltaTime * speed);
+        horizontalInput = Input.GetAxis("Horizontal");
+        forwardInput = Input.GetAxis("Vertical");
 
+        transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
+        transform.Rotate(Vector3.up, Time.deltaTime * turnSpeed * horizontalInput);
     }
 }
