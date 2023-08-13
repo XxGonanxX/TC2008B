@@ -1,0 +1,2 @@
+Si ves esto, se logró, pudiste desinstalar git lfs, pato consejo: No uses tecnologías que no dominas
+de forma estúpida
