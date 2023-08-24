@@ -1,0 +1,2 @@
+Si esta nota es visible, significa que se terminó el Bullet Hell, y además de eso, se pudo corregir
+el pull desde la mac, y esperemos que no se pierdan más archivos (ni tiempo) durante este proyecto.
