@@ -9,13 +9,24 @@ public class Bullet : MonoBehaviour
 
     private void OnEnable()
     {
-        Invoke("Destroy", 3.5f);
+        Invoke("DeactivateAfterDelay", 5f);
+    }
+
+    private void DeactivateAfterDelay()
+    {
+        gameObject.SetActive(false);
+    }
+
+    private void OnDisable()
+    {
+        CancelInvoke();
     }
 
     // Start is called before the first frame update
     void Start()
     {
         moveSpeed = 100f;
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("BossBullets"), LayerMask.NameToLayer("BossBullets"));
     }
 
     // Update is called once per frame
@@ -29,13 +40,18 @@ public class Bullet : MonoBehaviour
         moveDirection = dir;
     }
 
-    private void Destroy()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        gameObject.SetActive(false);
-    }
+        if (other.CompareTag("Player"))
+        {
+            PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(1); // Reduce la salud del jugador en 1
+            }
 
-    private void OnDisable()
-    {
-        CancelInvoke();
+            // Desactiva la bala después de colisionar con el jugador
+            gameObject.SetActive(false);
+        }
     }
 }

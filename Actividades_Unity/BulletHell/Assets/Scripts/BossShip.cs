@@ -14,18 +14,18 @@ public class BossShip : MonoBehaviour
     void Start()
     {
         // This is the movement of the ship, probably i will delete it
-        moveSpeed = 2f;
+        moveSpeed = 50f;
         moveRight = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x > 2f)
+        if (transform.position.x > 200f)
         {
             moveRight = false;
         }
-        else if (transform.position.x < -2f)
+        else if (transform.position.x < -200f)
         {
             moveRight = true;
         }

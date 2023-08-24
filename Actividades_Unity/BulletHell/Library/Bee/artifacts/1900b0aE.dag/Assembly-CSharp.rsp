@@ -374,11 +374,20 @@
 -analyzer:"B:/Aplicaciones/Unity Editor/2022.3.6f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"B:/Aplicaciones/Unity Editor/2022.3.6f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/Background Move.cs"
+"Assets/Scripts/BossHealth.cs"
 "Assets/Scripts/BossShip.cs"
 "Assets/Scripts/Bullet.cs"
 "Assets/Scripts/BulletPool.cs"
+"Assets/Scripts/DeveloperText.cs"
+"Assets/Scripts/DieBoss.cs"
+"Assets/Scripts/DiePlayer.cs"
 "Assets/Scripts/FireMovement.cs"
+"Assets/Scripts/PlayerBullet.cs"
+"Assets/Scripts/PlayerBulletManager.cs"
+"Assets/Scripts/PlayerHealth.cs"
 "Assets/Scripts/PlayerShip.cs"
+"Assets/Scripts/YouLoseText.cs"
+"Assets/Scripts/YouWinText.cs"
 -langversion:9.0
 
 /deterministic

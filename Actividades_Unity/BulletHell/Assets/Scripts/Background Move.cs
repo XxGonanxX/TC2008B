@@ -13,8 +13,6 @@ public class Move : MonoBehaviour
     {
         Transform overlayTransform = GameObject.Find("Overlay").transform;
         Transform overlayNearTransform = GameObject.Find("OverlayNear").transform;
-        Transform NebsTransform = GameObject.Find("Nebs").transform;
-        Transform NebsRightTransform = GameObject.Find("NebsRight").transform;
 
         if (overlayTransform == null)
         {
@@ -26,26 +24,14 @@ public class Move : MonoBehaviour
             Debug.LogError("No se encontró el objeto OverlayNear en la escena.");
         }
 
-        if (NebsTransform == null)
-        {
-            Debug.LogError("No se encontró el objeto Nebs en la escena.");
-        }
-
-        if (NebsRightTransform == null)
-        {
-            Debug.LogError("No se encontró el objeto NebsRight en la escena.");
-        }
 
         objectsToMove.Add(overlayTransform);
         objectsToMove.Add(overlayNearTransform);
-        objectsToMove.Add(NebsTransform);
-        objectsToMove.Add(NebsRightTransform);
 
         // Agrega las direcciones de movimiento correspondientes
         moveDirections.Add(Vector3.up);      // Mover "Overlay" hacia arriba
         moveDirections.Add(Vector3.down);    // Mover "OverlayNear" hacia abajo
-        moveDirections.Add(Vector3.up);      // Mover "Overlay" hacia arriba
-        moveDirections.Add(Vector3.down);    // Mover "OverlayNear" hacia abajo
+
 
         print("Thanks for buying this, if you need any support, email support@dilapidatedmeow.com. " +
             "Please note I cannot help with scripting related problems.");

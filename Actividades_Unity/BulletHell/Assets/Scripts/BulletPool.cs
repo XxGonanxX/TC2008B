@@ -4,23 +4,23 @@ using UnityEngine;
 
 public class BulletPool : MonoBehaviour
 {
-
     public static BulletPool bulletPoolInstance;
 
     [SerializeField]
-    private GameObject pooledBullet;
+    public GameObject pooledBullet;
     private bool notEnoughBulletsInPool = true;
 
-    private List<GameObject> bullets;
+    public List<GameObject> bullets;
 
-    private void Awake()
+    void Awake()
     {
-        bulletPoolInstance = this;
+        bulletPoolInstance = this; // Configurar la instancia de la pool
     }
-    // Start is called before the first frame update
+
     void Start()
     {
         bullets = new List<GameObject>();
+
     }
 
     public GameObject GetBullet()
@@ -46,5 +46,6 @@ public class BulletPool : MonoBehaviour
 
         return null;
     }
+
 
 }
