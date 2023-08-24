@@ -5,10 +5,21 @@ using UnityEngine;
 public class ShipMovement : MonoBehaviour
 {
     public float speed = 150f; // Velocidad de movimiento de la nave
+    public float reducedSpeed = 75f;
     
 
     void Update()
     {
+
+        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+        {
+            speed = reducedSpeed; // Asignar la velocidad reducida
+        }
+        else
+        {
+            speed = 150f; // Asignar la velocidad original
+        }
+
         // Obtener la entrada del jugador en los ejes horizontal y vertical
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
